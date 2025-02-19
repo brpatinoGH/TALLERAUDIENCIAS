@@ -2,6 +2,7 @@ package com.TallerAudiencias.audiencias.entities;
 
 import jakarta.persistence.*;
 
+@Entity
 @Table(name = "Sala")
 public class Sala {
     @Id
