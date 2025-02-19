@@ -26,7 +26,7 @@ public class Autoridad {
 
     @ManyToOne
     @JoinColumn(name = "dis_id")
-    private DistritoJudicial dis_id;
+    private com.TallerAudiencias.audiencias.model.DistritoJudicial dis_id;
 
     public Integer getAut_id() {
         return aut_id;

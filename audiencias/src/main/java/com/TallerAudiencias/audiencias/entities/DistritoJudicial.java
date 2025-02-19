@@ -1,4 +1,4 @@
-package com.TallerAudiencias.audiencias.entities;
+package com.TallerAudiencias.audiencias.model;
 
 import jakarta.persistence.*;
 
@@ -12,7 +12,5 @@ public class DistritoJudicial {
 
     @Column(name = "dis_nombre")
     private String disNombre;
-
-
 
 }
