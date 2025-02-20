@@ -1,13 +1,20 @@
 package com.TallerAudiencias.audiencias.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "usuario")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
 
     @Id
     @Column(name = "usr_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long usr_id;
 
     @Column(name = "usr_nombre")
@@ -30,68 +37,4 @@ public class Usuario {
 
     @Column(name = "usr_isadmin")
     private Boolean usr_isadmin;
-
-    public Long getUsr_id() {
-        return usr_id;
-    }
-
-    public void setUsr_id(Long usr_id) {
-        this.usr_id = usr_id;
-    }
-
-    public String getUsr_nombre() {
-        return usr_nombre;
-    }
-
-    public void setUsr_nombre(String usr_nombre) {
-        this.usr_nombre = usr_nombre;
-    }
-
-    public String getUsr_username() {
-        return usr_username;
-    }
-
-    public void setUsr_username(String usr_username) {
-        this.usr_username = usr_username;
-    }
-
-    public String getUsr_mail() {
-        return usr_mail;
-    }
-
-    public void setUsr_mail(String usr_mail) {
-        this.usr_mail = usr_mail;
-    }
-
-    public Boolean getUsr_estado() {
-        return usr_estado;
-    }
-
-    public void setUsr_estado(Boolean usr_estado) {
-        this.usr_estado = usr_estado;
-    }
-
-    public String getUsr_login() {
-        return usr_login;
-    }
-
-    public void setUsr_login(String usr_login) {
-        this.usr_login = usr_login;
-    }
-
-    public String getUsr_password() {
-        return usr_password;
-    }
-
-    public void setUsr_password(String usr_password) {
-        this.usr_password = usr_password;
-    }
-
-    public Boolean getUsr_isadmin() {
-        return usr_isadmin;
-    }
-
-    public void setUsr_isadmin(Boolean usr_isadmin) {
-        this.usr_isadmin = usr_isadmin;
-    }
 }
