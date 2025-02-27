@@ -7,25 +7,25 @@ import jakarta.persistence.*;
 @Table(name = "AUTORIDAD")
 public class Autoridad {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "aut_id")
-    private Integer aut_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long autId;
 
     @Column(name = "aut_nombre", length = 50)
-    private String aut_nombre;
+    private String autNombre;
 
     @Column(name = "aut_mail", length = 50)
-    private String aut_email;
+    private String autEmail;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "aut_tipo", nullable = false)
-    private TipoAutoridad aut_tipo;
+    private TipoAutoridad autTipo;
 
     @Column(name = "aut_estado")
-    private Boolean aut_estado;
+    private Boolean autEstado;
 
     @ManyToOne
     @JoinColumn(name = "dis_id")
-    private DistritoJudicial dis_id;
+    private DistritoJudicial disId;
 
 }
