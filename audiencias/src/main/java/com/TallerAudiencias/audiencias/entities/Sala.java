@@ -19,28 +19,4 @@ public class Sala {
     @JoinColumn(name = "dis_id", referencedColumnName = "id")
     private DistritoJudicial disId;
 
-    public Integer getSalId() {
-        return salId;
-    }
-
-    public void setSalId(Integer salId) {
-        this.salId = salId;
-    }
-
-    public String getSalNombre() {
-        return salNombre;
-    }
-
-    public void setSalNombre(String salNombre) {
-        this.salNombre = salNombre;
-    }
-
-    public String getSalLugar() {
-        return salLugar;
-    }
-
-    public void setSalLugar(String salLugar) {
-        this.salLugar = salLugar;
-    }
-
 }
