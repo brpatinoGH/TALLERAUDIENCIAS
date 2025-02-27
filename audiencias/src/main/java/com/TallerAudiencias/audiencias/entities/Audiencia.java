@@ -18,40 +18,40 @@ import java.time.LocalTime;
 public class Audiencia {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "aud_id")
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long audId;
 
     @Column(name = "aud_nombre")
-    private String nombre;
+    private String audNombre;
 
     @Column(name = "aud_fecins", nullable = false)
-    private LocalDate fechaInscripcion;
+    private LocalDate audFechaInscripcion;
 
     @Column(name = "aud_fecmod")
-    private LocalDate fechaModificacion;
+    private LocalDate audFechaModificacion;
 
     @Column(name = "aud_estado")
-    private Boolean estado;
+    private Boolean audEstado;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "aud_tipo")
-    private TipoAudiencia tipo;
+    private TipoAudiencia audTipo;
 
     @Column(name = "aud_fecha")
-    private LocalDate fecha;
+    private LocalDate audFecha;
 
     @Column(name = "aud_hora_ini")
-    private LocalTime horaInicio;
+    private LocalTime audHoraInicio;
 
     @Column(name = "aud_duracion")
-    private LocalTime duracion;
+    private LocalTime audDuracion;
 
     @Column(name = "aud_cuij")
-    private Integer cuij;
+    private Integer audCuij;
 
     @Column(name = "aud_caratula")
-    private String caratula;
+    private String audCaratula;
 
     @ManyToMany
     @JoinColumn(name = "aud_usrins")
@@ -65,7 +65,4 @@ public class Audiencia {
     @JoinColumn(name = "sal_id")
     private Sala sala;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "aud_tipo", nullable = false)
-    private TipoAudiencia aud_tipo;
 }
