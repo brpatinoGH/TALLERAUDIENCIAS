@@ -1,20 +1,13 @@
 package com.TallerAudiencias.audiencias.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "usuario")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Usuario {
 
     @Id
     @Column(name = "usr_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long usr_id;
 
     @Column(name = "usr_nombre")
@@ -37,4 +30,6 @@ public class Usuario {
 
     @Column(name = "usr_isadmin")
     private Boolean usr_isadmin;
+
+
 }
