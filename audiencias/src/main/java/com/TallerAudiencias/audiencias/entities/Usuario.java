@@ -8,28 +8,29 @@ public class Usuario {
 
     @Id
     @Column(name = "usr_id")
-    private Long usr_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long usrId;
 
     @Column(name = "usr_nombre")
-    private String usr_nombre;
+    private String usrNombre;
 
     @Column(name = "usr_username")
-    private String usr_username;
+    private String usrUsername;
 
     @Column(name = "usr_mail")
-    private String usr_mail;
+    private String usrMail;
 
     @Column(name = "usr_estado")
-    private Boolean usr_estado;
+    private Boolean usrEstado;
 
     @Column(name = "usr_login")
-    private String usr_login; //En el SQL esta puesto como string, pero creo que es un Boolean para saber si el usuario se logeo o está conectado.
+    private String usrLogin; //En el SQL esta puesto como string, pero creo que es un Boolean para saber si el usuario se logeo o está conectado.
 
     @Column(name = "usr_password")
-    private String usr_password;
+    private String usrPassword;
 
     @Column(name = "usr_isadmin")
-    private Boolean usr_isadmin;
+    private Boolean usrIsAdmin;
 
 
 }
