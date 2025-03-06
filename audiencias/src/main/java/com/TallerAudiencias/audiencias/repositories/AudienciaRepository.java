@@ -11,5 +11,4 @@ public interface AudienciaRepository extends JpaRepository<Audiencia, Long> {
 
     @Override
     Optional<Audiencia> findById(Long audienciaId);
-
 }

@@ -11,5 +11,4 @@ public interface AutoridadRepository extends JpaRepository<Autoridad, Long> {
 
     @Override
     Optional<Autoridad> findById(Long autoridadId);
-
 }

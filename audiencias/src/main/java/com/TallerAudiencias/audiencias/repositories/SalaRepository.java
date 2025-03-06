@@ -11,5 +11,4 @@ public interface SalaRepository extends JpaRepository<Sala, Long> {
 
     @Override
     Optional<Sala> findById(Long salaId);
-
 }

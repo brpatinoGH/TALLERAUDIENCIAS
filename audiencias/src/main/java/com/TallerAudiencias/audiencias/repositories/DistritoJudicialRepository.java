@@ -9,5 +9,4 @@ public interface DistritoJudicialRepository extends JpaRepository<DistritoJudici
 
     @Override
     Optional<DistritoJudicial> findById(Long distritoJudicialId);
-
 }
