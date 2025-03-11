@@ -51,7 +51,7 @@ public class Audiencia {
     private Integer audCuij;
 
     @Column(name = "aud_caratula")
-    private String audCaratula;
+    private String audCaratula;  // Apellido de juez y nombre de audiencia
 
     @ManyToMany
     @JoinColumn(name = "aud_usrins")

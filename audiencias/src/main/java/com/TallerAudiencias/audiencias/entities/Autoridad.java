@@ -2,8 +2,10 @@ package com.TallerAudiencias.audiencias.entities;
 
 import com.TallerAudiencias.audiencias.entities.enums.TipoAutoridad;
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 @Table(name = "AUTORIDAD")
 public class Autoridad {
     @Id
