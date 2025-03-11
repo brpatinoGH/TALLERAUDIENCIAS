@@ -3,12 +3,10 @@ package com.TallerAudiencias.audiencias.services.interfaces;
 import com.TallerAudiencias.audiencias.entities.DistritoJudicial;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface DistritoJudicialService {
-    DistritoJudicial createDistrito(DistritoJudicial distrito);
-    DistritoJudicial updateDistrito(DistritoJudicial distrito);
-    void deleteDistrito(Long id);
-    DistritoJudicial getDistritoById(Long id);
+    Optional<DistritoJudicial> getDistritoById(Long id);
     List<DistritoJudicial> getAllDistritos();
-    DistritoJudicial findByNombre(String nombre);
+    Optional<DistritoJudicial> findByNombre(String nombre);
 }
