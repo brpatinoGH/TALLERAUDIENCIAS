@@ -2,10 +2,13 @@ package com.TallerAudiencias.audiencias.entities;
 import com.TallerAudiencias.audiencias.entities.enums.TipoAudiencia;
 import com.TallerAudiencias.audiencias.entities.enums.TipoAutoridad;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
+@Data
 @Table(name = "AUDIENCIA_EXT")
 public class AudienciaExt {
 
