@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface DistritoJudicialRepository extends JpaRepository<DistritoJudicial, Long> {
 
-    @Override
-    Optional<DistritoJudicial> findById(Long distritoJudicialId);
+    Optional<DistritoJudicial> findByDisNombre(String nombre);
+
 }
