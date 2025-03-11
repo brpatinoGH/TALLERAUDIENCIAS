@@ -7,39 +7,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DistritoJudicialServiceImp implements DistritoJudicialService {
     @Autowired
     private DistritoJudicialRepository distritoJudicialRepository;
 
-    @Override
-    public DistritoJudicial createDistrito(DistritoJudicial distrito) {
-        return null;
-    }
 
     @Override
-    public DistritoJudicial updateDistrito(DistritoJudicial distrito) {
-        return null;
-    }
-
-    @Override
-    public void deleteDistrito(Long id) {
-
-    }
-
-    @Override
-    public DistritoJudicial getDistritoById(Long id) {
-        return null;
+    public Optional<DistritoJudicial> getDistritoById(Long id) {
+        try {
+            return distritoJudicialRepository.findById(id);
+        } catch (Exception e) {
+            throw new RuntimeException("No existe un distrito con ese ID", e);
+        }
     }
 
     @Override
     public List<DistritoJudicial> getAllDistritos() {
-        return List.of();
+        try {
+            return distritoJudicialRepository.findAll();
+        } catch (Exception e) {
+            throw new RuntimeException("No se encuentran los distritos", e);
+        }
     }
 
     @Override
-    public DistritoJudicial findByNombre(String nombre) {
-        return null;
+    public Optional<DistritoJudicial> findByNombre(String nombre) {
+        try {
+            return distritoJudicialRepository.findByDisNombre(nombre);
+        } catch (Exception e) {
+            throw new RuntimeException("No existe un distrito con ese nombre", e);
+        }
     }
 }
