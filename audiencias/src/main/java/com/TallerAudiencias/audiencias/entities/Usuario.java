@@ -3,6 +3,8 @@ package com.TallerAudiencias.audiencias.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
 @Table(name = "usuario")
@@ -33,6 +35,14 @@ public class Usuario {
 
     @Column(name = "usr_isadmin")
     private Boolean usrIsAdmin;
+
+    // @OneToMany(mappedBy = "usuarioId", cascade = CascadeType.ALL, orphanRemoval = true)
+    // private List<Audiencia> audiencias;
+
+    @ManyToOne
+    @JoinColumn(name = "dis_id")
+    private DistritoJudicial disId;
+
 
 
 }

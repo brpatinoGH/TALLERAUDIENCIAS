@@ -30,19 +30,13 @@ public class AudienciaExt {
     private Boolean eauEstado;
 
     @ManyToOne
-    @JoinColumn(name = "eau_usrins", referencedColumnName = "usr_id")
-    private Usuario usuarioInscripcion;
-
-    @ManyToOne
-    @JoinColumn(name = "eau_usrmod", referencedColumnName = "usr_id")
-    private Usuario usuarioModificacion;
-
-    @ManyToOne
     @JoinColumn(name = "aud_id", referencedColumnName = "aud_id")
-    private Audiencia audienciaId;
+    private Audiencia audId;
 
     @ManyToOne
     @JoinColumn(name = "aut_id", referencedColumnName = "aut_id")
-    private Autoridad autoridadId;
+    private Autoridad autId;
+
+
 
 }
