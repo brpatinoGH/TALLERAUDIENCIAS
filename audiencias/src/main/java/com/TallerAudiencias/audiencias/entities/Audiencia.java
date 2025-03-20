@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "AUDIENCIA")
@@ -53,16 +55,24 @@ public class Audiencia {
     @Column(name = "aud_caratula")
     private String audCaratula;  // Apellido de juez y nombre de audiencia
 
-    @ManyToMany
-    @JoinColumn(name = "aud_usrins")
-    private Usuario usuarioIns;
+    @ManyToOne
+    @JoinColumn(name = "sal_id")  // Esta columna hace referencia a la tabla Sala
+    private Sala salId;  // Relación ManyToOne, una audiencia está en una sala específica
 
-    @ManyToMany
-    @JoinColumn(name = "aud_usrmod")
-    private Usuario usuarioMod;
+    @OneToMany(mappedBy = "audId", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<AudienciaExt> audienciaExt;
 
-    @ManyToMany
-    @JoinColumn(name = "sal_id")
-    private Sala sala;
+/// NADA DE LO QUE VA ABAJO VA (EN TEORÍA)
+//    @ManyToMany
+//    @JoinColumn(name = "aud_usrins")
+//    private Usuario usuarioIns;
+//
+//    @ManyToMany
+//    @JoinColumn(name = "aud_usrmod")
+//    private Usuario usuarioMod;
+//
+//    @ManyToMany
+//    @JoinColumn(name = "sal_id")
+//    private Sala sala;
 
 }

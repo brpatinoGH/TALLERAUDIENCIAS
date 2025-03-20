@@ -4,6 +4,8 @@ import com.TallerAudiencias.audiencias.entities.enums.TipoAutoridad;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
 @Table(name = "AUTORIDAD")
@@ -29,5 +31,9 @@ public class Autoridad {
     @ManyToOne
     @JoinColumn(name = "dis_id")
     private DistritoJudicial disId;
+
+    @OneToMany(mappedBy = "autId", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<AudienciaExt> audienciaext;
+
 
 }
